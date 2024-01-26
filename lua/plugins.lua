@@ -12,5 +12,9 @@ return {
 	"williamboman/mason.nvim",
 	"mfussenegger/nvim-lint",
 	"ms-jpq/coq_nvim",
-	"github/copilot.vim"
+	"ms-jpq/coq.thirdparty",
+	"ms-jpq/coq.artifacts",
+	"romgrk/barbar.nvim",
+	"zbirenbaum/copilot.lua",
+	"nvim-lualine/lualine.nvim",
 }
