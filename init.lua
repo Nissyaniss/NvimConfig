@@ -20,40 +20,46 @@ require("lazy").setup("plugins")
 
 require("mason").setup()
 
+-- Theme
+vim.cmd[[colorscheme tokyonight-moon]]
+
+-- Vim Options
+vim.opt.relativenumber = true
+vim.opt.shiftwidth = 0
+vim.opt.tabstop = 4
+vim.opt.listchars = { space = "•", tab = "→ "}
+vim.opt.list = true
+vim.opt.showmode = false
+
 -- COQ
 -- TODO make in a different file
+
 
 local lsp = require("lspconfig")
 local coq = require("coq")
 
 lsp.clangd.setup(coq.lsp_ensure_capabilities())
 lsp.cssls.setup(coq.lsp_ensure_capabilities())
-lsp.lua_ls.setup(coq.lsp_ensure_capabilities())
+lsp.lua_ls.setup(coq.lsp_ensure_capabilities({
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { 'vim' }
+			}
+		}
+	}
+}))
 lsp.pylsp.setup(coq.lsp_ensure_capabilities())
 lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities())
 
-require("coq_3p"){
---	{ src = "copilot", short_name = "COP", accept_key = "<c-f>" }
-}
-
 vim.cmd("COQnow --shut-up")
 
--- Lua Line
--- TODO Configure this
+-- Wind Line
 
-require('lualine').setup()
+require('wlsample.airline')
 
 -- Copilot
--- TODO MAKE IT WORK
-
-vim.keymap.set('i', '<Tab>', function()
-	if require("copilot.suggestion").is_visible() then
-		require("copilot.suggestion").accept()
-	else
-		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
-	end
-end, { desc = "Super Tab" })
-
+-- TODO Make tab work
 
 require('copilot').setup({
 	suggestion = {
@@ -61,7 +67,7 @@ require('copilot').setup({
 		auto_trigger = true,
 		debounce = 75,
 		keymap = {
-			accept = "<Tab>",
+			accept = "<M-l>",
 			accept_word = false,
 			accept_line = false,
 			next = "<M-]>",
@@ -72,15 +78,3 @@ require('copilot').setup({
 	copilot_node_command = 'node', -- Node.js version must be > 18.x
 	server_opts_overrides = {},
 })
-
-
-
--- Theme
-vim.cmd[[colorscheme tokyonight-moon]]
-
--- Vim Options
-vim.opt.relativenumber = true
-vim.opt.shiftwidth = 0
-vim.opt.tabstop = 4
-vim.opt.listchars = { space = "•", tab = "→ "}
-vim.opt.list = true

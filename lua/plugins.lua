@@ -16,5 +16,5 @@ return {
 	"ms-jpq/coq.artifacts",
 	"romgrk/barbar.nvim",
 	"zbirenbaum/copilot.lua",
-	"nvim-lualine/lualine.nvim",
+	"windwp/windline.nvim",
 }
