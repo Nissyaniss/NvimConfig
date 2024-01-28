@@ -17,4 +17,29 @@ return {
 	"romgrk/barbar.nvim",
 	"zbirenbaum/copilot.lua",
 	"windwp/windline.nvim",
+	-- TODO Verify if it work with my machine || NEEDS NODE + YARN
+	{
+	"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && yarn install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
+	"RRethy/vim-illuminate",
+	{
+		'nvim-telescope/telescope.nvim', tag = '0.1.5',
+		dependencies = { 'nvim-lua/plenary.nvim' }
+	},
+	{
+		'nvimdev/dashboard-nvim',
+		event = 'VimEnter',
+		config = function()
+			require('dashboard').setup {
+			}
+		end,
+		dependencies = { {'nvim-tree/nvim-web-devicons'}}
+	},
+	{'akinsho/toggleterm.nvim', version = "*", config = true},
 }
