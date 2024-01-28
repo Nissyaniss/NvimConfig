@@ -1,13 +1,12 @@
 vim.g.mapleader = ' '
 
-require("plugins.LazyConf")
+require("pluginsConfs.LazyConf")
 require("mason").setup()
 vim.cmd[[colorscheme tokyonight-moon]]
 require("conf.Vim")
-require("lua.keybinds")
-require("plugins.LspCoqConf")
+require("keybinds")
+require("pluginsConfs.LspCoqConf")
 require("wlsample.airline")
-require("plugins.dashboardConf")
-require("plugins.CopilotConf")
-require("plugins.NvimTreeConf")
--- TODO Make tab work
+require("pluginsConfs.dashboardConf")
+require("pluginsConfs.CopilotConf")
+require("pluginsConfs.NvimTreeConf")

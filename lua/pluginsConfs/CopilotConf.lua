@@ -1,3 +1,5 @@
+-- TODO Make tab work
+
 require('copilot').setup({
 	suggestion = {
 		enabled = true,
