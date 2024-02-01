@@ -11,7 +11,7 @@ require('copilot').setup({
 			accept_line = false,
 			next = "<M-]>",
 			prev = "<M-[>",
-			dismiss = "<C-]>",
+			dismiss = "<C-l>",
 		},
 	},
 	copilot_node_command = 'node', -- Node.js version must be > 18.x

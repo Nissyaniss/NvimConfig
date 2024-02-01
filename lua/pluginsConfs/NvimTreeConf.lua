@@ -22,6 +22,7 @@ require("nvim-tree").setup({
 	},
 })
 
+
 vim.api.nvim_create_autocmd({ "BufAdd" },
 {
 	callback = function()

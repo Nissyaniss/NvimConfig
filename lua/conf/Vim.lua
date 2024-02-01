@@ -5,3 +5,4 @@ vim.opt.tabstop = 4
 vim.opt.listchars = { space = "•", tab = "→ "}
 vim.opt.list = true
 vim.opt.showmode = false
+vim.opt.fillchars = { eob = ' ' }

@@ -1,11 +1,5 @@
 return {
 	"folke/which-key.nvim",
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
 	"nvim-tree/nvim-tree.lua",
 	'nvim-tree/nvim-web-devicons',
 	"neovim/nvim-lspconfig",
@@ -15,7 +9,8 @@ return {
 	"ms-jpq/coq.thirdparty",
 	"ms-jpq/coq.artifacts",
 	"romgrk/barbar.nvim",
-	"zbirenbaum/copilot.lua",
+	--"zbirenbaum/copilot.lua",
+	"Exafunction/codeium.vim",
 	"windwp/windline.nvim",
 	-- TODO Verify if it work with my machine || NEEDS NODE + YARN
 	{
@@ -41,5 +36,19 @@ return {
 		end,
 		dependencies = { {'nvim-tree/nvim-web-devicons'}}
 	},
-	{'akinsho/toggleterm.nvim', version = "*", config = true},
+	{
+		'akinsho/toggleterm.nvim',
+		version = "*",
+		config = true
+	},
+	"NvChad/nvim-colorizer.lua",
+	"lewis6991/gitsigns.nvim",
+	{
+		"askfiy/visual_studio_code",
+		priority = 100,
+		config = function()
+			vim.cmd([[colorscheme visual_studio_code]])
+		end,
+	},
+	"m4xshen/autoclose.nvim",
 }
