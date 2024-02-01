@@ -23,6 +23,23 @@ require("nvim-tree").setup({
 })
 
 
+vim.api.nvim_create_autocmd({ "VimEnter" },
+{
+	callback = function()
+		local hasToOpenTree = pcall(vim.api.nvim_echo, {{vim.v.argv[3], 'None'}, {'', 'None'}}, true, {})
+
+		if hasToOpenTree == true
+		then
+			if vim.v.argv[3] ~= "."
+			then
+				local api = require("nvim-tree.api")
+				api.tree.toggle({path = "<args>", focus = false})
+			end
+		end
+	end
+})
+
+
 vim.api.nvim_create_autocmd({ "BufAdd" },
 {
 	callback = function()
@@ -32,11 +49,10 @@ vim.api.nvim_create_autocmd({ "BufAdd" },
 			api.tree.toggle({path = "<args>", focus = false})
 		end
 	end
-}
-)
+})
 
 local function tab_win_closed(winnr)
-	local api = require"nvim-tree.api"
+	local api = require("nvim-tree.api")
 	local tabnr = vim.api.nvim_win_get_tabpage(winnr)
 	local bufnr = vim.api.nvim_win_get_buf(winnr)
 	local buf_info = vim.fn.getbufinfo(bufnr)[1]
