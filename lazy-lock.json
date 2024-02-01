@@ -1,5 +1,4 @@
 {
-  "autoclose.nvim": { "branch": "main", "commit": "37e11589aac55b0e8810dc5865f898f9cb36fef6" },
   "barbar.nvim": { "branch": "master", "commit": "c3ab0dbfe143ffb89a245e5b530f5349d6bb64e1" },
   "codeium.vim": { "branch": "main", "commit": "04e5f9dfb11d3bbcc28b4685378c1e6d2963fd1e" },
   "coq.artifacts": { "branch": "artifacts", "commit": "e7202d1a1b5cfa91446d5b7a035f915934e4d713" },
@@ -18,6 +17,7 @@
   "plenary.nvim": { "branch": "master", "commit": "663246936325062427597964d81d30eaa42ab1e4" },
   "telescope.nvim": { "branch": "master", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
   "toggleterm.nvim": { "branch": "main", "commit": "cbd041d91b90cd3c02df03fe6133208888f8e008" },
+  "ultimate-autopair.nvim": { "branch": "v0.6", "commit": "25c13e0ce167db0255456cac10158b27d2be30c0" },
   "vim-illuminate": { "branch": "master", "commit": "97c1265ff0b67064b6cfdc15bafc50202a537ae2" },
   "visual_studio_code": { "branch": "master", "commit": "d185c6d75e577aedda9bb9dcc8b8b4b410b540dd" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
