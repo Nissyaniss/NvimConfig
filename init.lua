@@ -12,4 +12,4 @@ require('gitsigns').setup()
 require("pluginsConfs.NvimTreeConf")
 require("pluginsConfs.LspCocConf")
 
--- TODO make tab work for codeium (set <M-l> for the time being), spellchecker
+-- TODO spellchecker
