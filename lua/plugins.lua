@@ -5,14 +5,27 @@ return {
 	"neovim/nvim-lspconfig",
 	"williamboman/mason.nvim",
 	"mfussenegger/nvim-lint",
-	"ms-jpq/coq_nvim",
-	"ms-jpq/coq.thirdparty",
-	"ms-jpq/coq.artifacts",
+
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+	"saadparwaiz1/cmp_luasnip",
+	"L3MON4D3/LuaSnip",
+	"hrsh7th/cmp-nvim-lua",
+	"hrsh7th/cmp-path",
+	"hrsh7th/cmp-cmdline",
+
 	"romgrk/barbar.nvim",
-	--"zbirenbaum/copilot.lua",
-	"Exafunction/codeium.vim",
+	{
+		'Exafunction/codeium.vim',
+		config = function ()
+			-- Change '<C-g>' here to any keycode you like.
+			vim.keymap.set('i', '<Tab>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+			vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+			vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+			vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+		end
+	},
 	"windwp/windline.nvim",
-	-- TODO Verify if it work with my machine || NEEDS NODE + YARN
 	{
 	"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -50,12 +63,12 @@ return {
 			vim.cmd([[colorscheme visual_studio_code]])
 		end,
 	},
-	{
-		'altermo/ultimate-autopair.nvim',
-		event={'InsertEnter','CmdlineEnter'},
-		branch='v0.6', --recomended as each new version will have breaking changes
-		opts={
-			--Config goes here
-		},
-	}
+--	{
+--		'altermo/ultimate-autopair.nvim',
+--		event={'InsertEnter','CmdlineEnter'},
+--		branch='v0.6', --recomended as each new version will have breaking changes
+--		opts={
+--			--Config goes here
+--		},
+--	}
 }
