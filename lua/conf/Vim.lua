@@ -6,3 +6,5 @@ vim.opt.listchars = { space = "•", tab = "→ "}
 vim.opt.list = true
 vim.opt.showmode = false
 vim.opt.fillchars = { eob = ' ' }
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us', 'fr' }

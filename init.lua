@@ -6,10 +6,8 @@ require("conf.Vim")
 require("keybinds")
 require("wlsample.airline")
 require("pluginsConfs.dashboardConf")
---require("pluginsConfs.CodeiumConf")
 require('gitsigns').setup()
---require("pluginsConfs.AutoPairsConf")
 require("pluginsConfs.NvimTreeConf")
 require("pluginsConfs.LspCocConf")
 
--- TODO spellchecker
+-- TODO: add fav (ex : cours etc)

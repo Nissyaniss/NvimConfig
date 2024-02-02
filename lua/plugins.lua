@@ -1,5 +1,15 @@
 return {
-	"folke/which-key.nvim",
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {
+			require("pluginsConfs.wichKeyConf")
+		}
+	},
 	"nvim-tree/nvim-tree.lua",
 	'nvim-tree/nvim-web-devicons',
 	"neovim/nvim-lspconfig",
@@ -63,12 +73,5 @@ return {
 			vim.cmd([[colorscheme visual_studio_code]])
 		end,
 	},
---	{
---		'altermo/ultimate-autopair.nvim',
---		event={'InsertEnter','CmdlineEnter'},
---		branch='v0.6', --recomended as each new version will have breaking changes
---		opts={
---			--Config goes here
---		},
---	}
+	"nvim-treesitter/nvim-treesitter",
 }
