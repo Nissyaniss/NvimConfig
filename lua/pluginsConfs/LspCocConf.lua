@@ -76,4 +76,4 @@ require('lspconfig')['clangd'].setup {}
 require('lspconfig')['cssls'].setup {}
 require('lspconfig')['pylsp'].setup {}
 require('lspconfig')['rust_analyzer'].setup {}
-require('lspconfig')['java_language_server'].setup {}
+require('lspconfig')['jdtls'].setup {}

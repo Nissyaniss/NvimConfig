@@ -74,4 +74,5 @@ return {
 		end,
 	},
 	"nvim-treesitter/nvim-treesitter",
+	"mg979/vim-visual-multi",
 }
