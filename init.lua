@@ -1,13 +1,12 @@
 vim.g.mapleader = ' '
 
-require("pluginsConfs.LazyConf")
+require("conf.Lazy")
 require("mason").setup()
-require("conf.Vim")
-require("keybinds")
 require("wlsample.airline")
-require("pluginsConfs.dashboardConf")
-require('gitsigns').setup()
-require("pluginsConfs.NvimTreeConf")
-require("pluginsConfs.LspCocConf")
-
--- TODO: add fav (ex : cours etc)
+require("gitsigns").setup()
+require("Keybinds")
+require("conf.Vim")
+require("conf.Dashboard")
+require("conf.NvimTree")
+require("conf.Lsp+Comp")
+require("conf.Treesitter")

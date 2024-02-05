@@ -20,6 +20,16 @@ db.setup({
 		shortcut = {
 			{ desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
 			{
+				desc = ' Neovim config',
+				action = "e /home/nissya/.config/nvim/ | cd /home/nissya/.config/nvim",
+				key = 'n',
+			},
+			{
+				desc = ' Cours',
+				action = "e /home/nissya/Cours | cd /home/nissya/Cours",
+				key = 'c',
+			},
+			{
 				icon = ' ',
 				icon_hl = '@variable',
 				desc = 'Files',

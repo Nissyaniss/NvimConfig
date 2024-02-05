@@ -14,3 +14,7 @@ vim.keymap.set('n', '<Leader>f', '<Cmd>Telescope find_files<CR>')
 -- Terminal
 
 vim.keymap.set('n', '<Leader>t', '<Cmd>ToggleTerm size=30<CR>')
+
+-- SearchBox
+
+vim.keymap.set('n', '<C-f>', '<Cmd>SearchBoxIncSearch<CR>')
