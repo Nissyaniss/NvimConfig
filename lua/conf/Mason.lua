@@ -1,0 +1,20 @@
+require("mason").setup({
+	ensure_installed = {
+		'alex',
+		'bash-language-server',
+		'checkstyle',
+		'clangd',
+		'cpplint',
+		'css-lsp',
+		'esling_d',
+		'htmlhint',
+		'jdtls',
+		'lua-language-server',
+		'python-lsp-server',
+		'r-languageserver',
+		'ruff',
+		'rust-analyzer',
+		'sqlpuff',
+		'stylelint',
+	}
+})

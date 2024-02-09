@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 
 require("conf.Lazy")
-require("mason").setup()
+require("conf.Mason")
 require("wlsample.airline")
 require("gitsigns").setup()
 require("Keybinds")
@@ -10,3 +10,4 @@ require("conf.Dashboard")
 require("conf.NvimTree")
 require("conf.Lsp+Comp")
 require("conf.Treesitter")
+require("conf.Spell")
