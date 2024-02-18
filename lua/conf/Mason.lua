@@ -1,20 +1,13 @@
-require("mason").setup({
+require("mason").setup()
+require("mason-lspconfig").setup({
 	ensure_installed = {
-		'alex',
-		'bash-language-server',
-		'checkstyle',
+		'bashls',
 		'clangd',
-		'cpplint',
-		'css-lsp',
-		'esling_d',
-		'htmlhint',
+		'cssls',
 		'jdtls',
-		'lua-language-server',
-		'python-lsp-server',
-		'r-languageserver',
-		'ruff',
-		'rust-analyzer',
-		'sqlpuff',
-		'stylelint',
+		'lua_ls',
+		'pylsp',
+		'r_language_server',
+		'rust_analyzer',
 	}
 })

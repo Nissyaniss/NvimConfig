@@ -77,3 +77,6 @@ require('lspconfig')['cssls'].setup {}
 require('lspconfig')['pylsp'].setup {}
 require('lspconfig')['rust_analyzer'].setup {}
 require('lspconfig')['jdtls'].setup {}
+require('lspconfig')['kotlin_language_server'].setup {}
+require('lspconfig')['lua_ls'].setup {}
+require('lspconfig')['r_language_server'].setup {}

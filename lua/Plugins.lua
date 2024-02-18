@@ -14,6 +14,7 @@ return {
 	'nvim-tree/nvim-web-devicons',
 	"neovim/nvim-lspconfig",
 	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 	"mfussenegger/nvim-lint",
 
 	"hrsh7th/nvim-cmp",
