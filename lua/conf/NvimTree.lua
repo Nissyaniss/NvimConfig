@@ -81,8 +81,15 @@ end
 
 vim.api.nvim_create_autocmd("WinClosed", {
 	callback = function ()
+		local hasDressingInput = false
 		local winnr = tonumber(vim.fn.expand("<amatch>"))
-		vim.schedule_wrap(tab_win_closed(winnr))
+		local bufnr = vim.api.nvim_win_get_buf(winnr)
+		if vim.bo[bufnr].filetype == "DressingInput" then
+			hasDressingInput = true
+		end
+		if not hasDressingInput then
+			vim.schedule_wrap(tab_win_closed(winnr))
+		end
 	end,
 	nested = true
 })
