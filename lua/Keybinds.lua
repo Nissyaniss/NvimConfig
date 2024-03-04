@@ -18,3 +18,7 @@ vim.keymap.set('n', '<Leader>t', '<Cmd>ToggleTerm size=30<CR>')
 -- SearchBox
 
 vim.keymap.set('n', '<C-f>', '<Cmd>SearchBoxIncSearch<CR>')
+
+-- Code actions
+
+vim.keymap.set('n', '<C-p>', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
