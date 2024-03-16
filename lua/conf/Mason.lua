@@ -7,7 +7,6 @@ require("mason-lspconfig").setup({
 		'jdtls',
 		'lua_ls',
 		'pylsp',
-		'r_language_server',
 		'rust_analyzer',
 	}
 })
